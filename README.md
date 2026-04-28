@@ -108,4 +108,3 @@ While the label-aware cropping proved highly effective for preserving target are
 
 ## Author
 **Yasaman Moradi Fard** *MSc in Medical Engineering, Friedrich-Alexander-Universität Erlangen-Nürnberg* Project Representation Learning SS 2024
-```
