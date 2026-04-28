@@ -1,6 +1,5 @@
 # MedAugment_ZoomInOut
-Further Development of MedAugment method in Medical Data Augmentation. Project has been done in summer semester 2024.
-
+This repository extends **MedAugment** with **random** and **label-aware zoom-in/zoom-out augmentations** for medical image **classification** and **segmentation**. The goal is to simulate shifting clinical focus while preserving diagnostically relevant regions, especially in settings with limited annotated medical data.
 
 # Zoom-In/Out Augmentation: Refining MedAugment for Medical Image Analysis
 
@@ -14,6 +13,7 @@ This repository hosts the code and documentation for my advanced deep learning a
 This project is built upon the work proposed in the paper:
 **"MedAugment: Universal Automatic Data Augmentation Plug-in for Medical Image Analysis"** by *Zhaoshan Liu, Qiujie Lv, Yifan Li, Ziduo Yang, and Lei Shen*.
 * **Original Paper:** [arXiv:2306.17466](https://arxiv.org/abs/2306.17466)
+* **Original Repository:** https://github.com/NUS-Tim/MedAugment
 * **Acknowledgment:** I implemented the base MedAugment framework from their paper as the foundation for my experiments.
 
 ---
@@ -30,8 +30,16 @@ I introduced two novel augmentation methods into the pipeline:
    * **Label-Aware Resizing:** Resizing the image while mathematically ensuring that regions of interest (labeled areas/masks) remain safely within the frame.
    * **Label-Aware Cropping:** Cropping the image to simulate a physician "zooming in" on an anomaly, guaranteeing that critical pathological areas are never excluded.
 
-### Results Highlight
-These augmentations were tested across multiple architectures for both Classification (VGGNet, ResNeXt, ConvNeXt) and Segmentation (UNet++, FPN, DeepLabV3). 
+### Results
+### Reported highlights
+
+| Task | Model | Observation |
+|------|-------|-------------|
+| Classification | VGGNet, ResNeXt, ConvNeXt | Mixed results across datasets; some experiments improved over standard MedAugment |
+| Segmentation | UNet++, FPN, DeepLabV3 | Label-aware zoom showed the most consistent gains |
+| Segmentation | DeepLabV3 | Improved by **3.64%** over MedAugment baseline |
+| Segmentation | FPN | Improved by **1.0%** over MedAugment baseline |
+
 * **Overall Impact:** Nearly 40% of the experiments showed improvement over the standard MedAugment baseline.
 * **Standout Performance:** The Label-Aware Zoom-In strategy showed notable improvements in segmentation tasks. For instance, **DeepLabV3 improved by 3.64%** and **FPN improved by 1.0%** compared to using MedAugment alone.
 
