@@ -60,7 +60,7 @@ These augmentations were tested across multiple architectures for both Classific
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/MedAugment-ZoomInOut.git](https://github.com/yourusername/MedAugment-ZoomInOut.git)
+   git clone [https://github.com/yourusername/MedAugment-ZoomInOut.git](https://github.com/YasamanMoradifard/MedAugment_ZoomInOut.git)
    cd MedAugment-ZoomInOut
    ```
 
