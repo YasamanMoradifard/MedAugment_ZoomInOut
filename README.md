@@ -1,6 +1,3 @@
-# MedAugment_ZoomInOut
-This repository extends **MedAugment** with **random** and **label-aware zoom-in/zoom-out augmentations** for medical image **classification** and **segmentation**. The goal is to simulate shifting clinical focus while preserving diagnostically relevant regions, especially in settings with limited annotated medical data.
-
 # Zoom-In/Out Augmentation: Refining MedAugment for Medical Image Analysis
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
